@@ -10,11 +10,14 @@ interface OrphanageDataRouteParams {
 }
 
 export default function OrphanageData() {
+  const [name, setName] = useState('')
+  const [about, setAbout] = useState('')
+  const [instructions, setInstructions] = useState('')
+  const [opening_hours, setOpeningHours] = useState('')
+  const [open_on_weekends, setOpenOnWeekends] = useState(false)
+
   const route = useRoute();
   const navigation = useNavigation();
-
-  const [open_on_weekends, setOpenOnWeekends] = useState(false);
-
   const params = route.params as OrphanageDataRouteParams;
   const position = params.position;
 
@@ -45,17 +48,21 @@ export default function OrphanageData() {
       <Text style={styles.label}>Nome</Text>
       <TextInput
         style={styles.input}
+        value={name}
+        onChangeText={setName}
       />
 
       <Text style={styles.label}>Sobre</Text>
       <TextInput
         style={[styles.input, { height: 110 }]}
         multiline
+        value={about}
+        onChangeText={setAbout}
       />
 
       <Text style={styles.label}>Whatsapp</Text>
       <TextInput
-        style={styles.input}
+        style={styles.input}        
       />
 
       <Text style={styles.label}>Fotos</Text>
