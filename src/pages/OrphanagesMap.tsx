@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { StyleSheet, Dimensions, View, Text } from 'react-native';
 import MapView, { Marker, Callout, PROVIDER_GOOGLE } from 'react-native-maps';
-import { useNavigation } from '@react-navigation/native'
+import { useNavigation, useFocusEffect } from '@react-navigation/native'
 import { RectButton } from 'react-native-gesture-handler';
 import { Feather } from '@expo/vector-icons'
 
@@ -27,11 +27,11 @@ export default function OrphanagesMap() {
     navigation.navigate('SelectMapPosition' as any)
   }
 
-  useEffect(() => {
+  useFocusEffect(() => {
     api.get('orphanages').then(response => {
       setOrphanages(response.data)
     })
-  }, [])
+  })
 
   return (
     <View style={styles.container}>      
