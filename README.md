@@ -1,4 +1,10 @@
-# ![](https://github.com/luiizsilverio/happy-react-native/blob/main/src/images/marker.png)<br />Happy
+<table>
+  <tr>
+    <td><img src="https://github.com/luiizsilverio/happy-react-native/blob/main/src/images/marker.png" /></td>
+    <td><h1>Happy</h1></td>
+  </tr>
+</table>
+
 ## Conteúdo
 * [Sobre o Projeto](#sobre-o-projeto)
 * [Tecnologias](#hammer_and_wrench-tecnologias)
