@@ -1,4 +1,4 @@
-# ![](https://github.com/luiizsilverio/happy-react-native/blob/main/src/images/marker.svg)<br />Happy
+# ![](https://github.com/luiizsilverio/happy-react-native/blob/main/src/images/marker.png)<br />Happy
 ## Conteúdo
 * [Sobre o Projeto](#sobre-o-projeto)
 * [Tecnologias](#hammer_and_wrench-tecnologias)
@@ -12,16 +12,16 @@ Aplicação desenvolvida em React Native e Typescript para cadastrar e acessar o
 Permite visualizar um mapa interativo, com a posição dos orfanatos cadastrados.<br />
 Ao cadastrar um orfanato, permite selecionar uma ou mais imagens.<br />
 Para funcionar, é preciso que a aplicação [happy-back](https://github.com/luiizsilverio/happy-back), desenvolvida em Node, esteja rodando na porta 3333.<br />
-Acrescentei um spinner na tela de carregamento dos dados do orfanato.<br />
+Acrescentei uma animação na tela de carregamento dos dados do orfanato.<br />
 
 ## :hammer_and_wrench: Tecnologias
 * <ins>React Native</ins>
 * <ins>Typescript</ins>
 * <ins>Expo</ins>: componentes de fonte, image-picker, status-bar etc.
 * Mapa interativo com <ins>React-native-maps</ins>
-* Acesso à API através do <ins>Axios</ins>
 * Animação com <ins>Lottie-react-native</ins>
 * Rotas com <ins>React-navigation/native</ins>
+* Acesso à API através do <ins>Axios</ins>
 
 ## :camera_flash: Screenshots
 ![](https://github.com/luiizsilverio/happy-react-native/blob/main/assets/happy.gif)
