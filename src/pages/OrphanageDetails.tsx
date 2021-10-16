@@ -8,7 +8,7 @@ import LottieView from 'lottie-react-native'
 import loadingBaby from '../../assets/baby.json'
 
 import mapMarkerImg from '../images/marker.png';
-import { api } from '../services/api';
+import { api, api_host } from '../services/api';
 
 interface IOrphanage {
   id: number
@@ -41,7 +41,11 @@ export default function OrphanageDetails() {
   }
 
   useEffect(() => {
-    api.get(`orphanages/${params.id}`).then(response => {
+    api.get(`orphanages/${params.id}`).then(response => {      
+      (response.data as IOrphanage).images.forEach((image, idx) => {
+        image.url = image.url.replace('localhost', api_host)
+      })
+
       setOrphanage(response.data)
     })
   }, [params.id])
@@ -64,6 +68,7 @@ export default function OrphanageDetails() {
     <ScrollView style={styles.container}>
       <View style={styles.imagesContainer}>
         <ScrollView horizontal pagingEnabled>
+          
           {
             orphanage.images.map(image => (
               <Image key={image.id} 
@@ -72,6 +77,7 @@ export default function OrphanageDetails() {
               />
             ))
           }
+          
         </ScrollView>
       </View>
 
@@ -154,7 +160,7 @@ const styles = StyleSheet.create({
   },
 
   imagesContainer: {
-    height: 240,
+    height: 240    
   },
 
   image: {
